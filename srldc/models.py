@@ -36,21 +36,17 @@ class Table2CData(models.Model):
     state = models.CharField(max_length=100, null=True, blank=True)
 
     max_demand_met_of_the_day = models.FloatField(null=True, blank=True)
-    time_max_demand_met = models.CharField(max_length=50, null=True, blank=True)
+    time = models.CharField(max_length=50, null=True, blank=True)
     shortage_during_max_demand = models.FloatField(null=True, blank=True)
     requirement_at_max_demand = models.FloatField(null=True, blank=True)
 
-    max_requirement_of_the_day = models.FloatField(null=True, blank=True)
+    demand_met_max_requirement = models.FloatField(null=True, blank=True)
     time_max_requirement = models.CharField(max_length=50, null=True, blank=True)
     shortage_during_max_requirement = models.FloatField(null=True, blank=True)
-    demand_met_at_max_requirement = models.FloatField(null=True, blank=True)
-
-    min_demand_met = models.FloatField(null=True, blank=True)
-    time_min_demand_met = models.CharField(max_length=50, null=True, blank=True)
-
+    max_requirement_day = models.FloatField(null=True, blank=True)
     ace_max = models.FloatField(null=True, blank=True)
-    ace_min = models.FloatField(null=True, blank=True)
     time_ace_max = models.CharField(max_length=50, null=True, blank=True)
+    ace_min = models.FloatField(null=True, blank=True)
     time_ace_min = models.CharField(max_length=50, null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
